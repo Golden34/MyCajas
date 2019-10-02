@@ -1,120 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:id="@+id/frame_raiz"
     tools:context=".MainActivity">
-    <!--
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOLA">
-    </EditText>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="94dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />       -->
 
-    //Primera linea
-    <com.example.mycajas.MiLL
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimaryDark">
-        <com.example.mycajas.MiLL
-            android:tag="1"
-            android:onClick="cajaTocada"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark">
-        </com.example.mycajas.MiLL>
-        <com.example.mycajas.MiLL
-            android:tag="2"
-            android:onClick="cajaTocada"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorAccent">
-        </com.example.mycajas.MiLL>
-    </com.example.mycajas.MiLL>
 
-    //Segunda Linea
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3.5"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimary">
-        <com.example.mycajas.MiLL
-            android:tag="4"
-            android:onClick="cajaTocada"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorGolden">
-        </com.example.mycajas.MiLL>
-        <com.example.mycajas.MiLL
-            android:tag="8"
-            android:onClick="cajaTocada"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorBlue">
-        </com.example.mycajas.MiLL>
-        <com.example.mycajas.MiLL
-            android:tag="16"
-            android:onClick="cajaTocada"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorYellow">
-        </com.example.mycajas.MiLL>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:id="@+id/caja_superior"
+        android:orientation="vertical">
+        <!--
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOLA">
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />       -->
 
-    //Tercera Linea
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:orientation="horizontal">
-        <com.example.mycajas.MiLL
-            android:tag="32"
-            android:onClick="cajaTocada"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-        </com.example.mycajas.MiLL>
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:id="@+id/caja_raiz"
             android:orientation="vertical">
-            <com.example.mycajas.MiLL
-                android:tag="64"
-                android:onClick="cajaTocada"
+
+            //Primera linea
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
-                android:background="@color/colorGolden">
-            </com.example.mycajas.MiLL>
-            <com.example.mycajas.MiLL
-                android:tag="128"
-                android:onClick="cajaTocada"
+                android:layout_weight="4"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal">
+
+                <com.example.mycajas.MiLL
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="cajaTocada"
+                    android:tag="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:text="22"
+                        android:id="@+id/n1"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"/>
+
+                </com.example.mycajas.MiLL>
+
+                <com.example.mycajas.MiLL
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:onClick="cajaTocada"
+                    android:tag="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:text="22"
+                        android:id="@+id/n2"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"/>
+
+                </com.example.mycajas.MiLL>
+            </LinearLayout>
+
+            //Segunda Linea
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_weight="3.5"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <com.example.mycajas.MiLL
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorGolden"
+                    android:onClick="cajaTocada"
+                    android:tag="4">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:text="22"
+                        android:id="@+id/n3"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"/>
+
+                </com.example.mycajas.MiLL>
+
+                <com.example.mycajas.MiLL
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlue"
+                    android:onClick="cajaTocada"
+                    android:tag="8">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:text="22"
+                        android:id="@+id/n4"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"/>
+
+                </com.example.mycajas.MiLL>
+
+                <com.example.mycajas.MiLL
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorYellow"
+                    android:onClick="cajaTocada"
+                    android:tag="16">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:text="22"
+                        android:id="@+id/n5"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"/>
+
+                </com.example.mycajas.MiLL>
+            </LinearLayout>
+
+            //Tercera Linea
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <com.example.mycajas.MiLL
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:onClick="cajaTocada"
+                    android:tag="32">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="40sp"
+                        android:text="22"
+                        android:id="@+id/n6"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"/>
+
+                </com.example.mycajas.MiLL>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.example.mycajas.MiLL
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="@color/colorGolden"
+                        android:onClick="cajaTocada"
+                        android:tag="64">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="40sp"
+                            android:text="22"
+                            android:id="@+id/n7"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"/>
+
+                    </com.example.mycajas.MiLL>
+
+                    <com.example.mycajas.MiLL
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:background="@color/colorYellow"
+                        android:onClick="cajaTocada"
+                        android:tag="128">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="40sp"
+                            android:text="22"
+                            android:id="@+id/n8"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"/>
+
+                    </com.example.mycajas.MiLL>
+                </LinearLayout>
+            </LinearLayout>
+
+         </LinearLayout>
+
+        // CUARTA LINEA
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/caja_inferior"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:text=""
+                    android:inputType="number"
+                    android:hint="Suma"
+                    android:id="@+id/e1"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:background="@color/colorYellow">
-            </com.example.mycajas.MiLL>
+                android:tag="">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Pulsa cuando lo tengas"
+                    android:onClick="comprobarSuma"
+                    android:id="@+id/b1"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/boton_inicio"
+        android:onClick="empezar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:text="Botón"
+        android:src="@drawable/ic_play"
+        />
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/salir"
+        android:icon="@drawable/ic_play"
+        android:orderInCategory="1"
+        android:title="SaLiR"
+        app:showAsAction="always|withText">
+    </item>
+    <item
+        android:id="@+id/buscar"
+        android:icon="@drawable/delgada"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="Buscar">
+    </item>
+    <item
+        android:id="@+id/comparar"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:title="Comparar">
+    </item>
+    <item
+        android:id="@+id/blabla"
+        android:icon="@drawable/ic_launcher_background"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        android:title="Bla, Bla,...">
+    </item>
+</menu>
