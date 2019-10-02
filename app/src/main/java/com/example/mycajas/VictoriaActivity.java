@@ -3,6 +3,7 @@ package com.example.mycajas;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,6 +43,28 @@ public class VictoriaActivity extends AppCompatActivity {
         {
             patras(null);
         }
+
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                Log.d("MIAPP", "Para aTRás  <--");
+                break;
+            case R.id.salir:
+                Log.d("MIAPP", "Menu salir");
+                break;
+            case R.id.comparar:
+                Log.d("MIAPP", "Menu comparar");
+                break;
+            case R.id.blabla:
+                Log.d("MIAPP", "Menu blabla");
+
+                // Ir a la otra actividad via Intent
+                finish();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
