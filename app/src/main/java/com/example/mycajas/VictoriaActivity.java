@@ -30,13 +30,19 @@ public class VictoriaActivity extends AppCompatActivity {
         this.ad = (AnimationDrawable) imagenView.getBackground();
         this.ad.start();
 
+    }
+
+    // Inflado del menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mi = getMenuInflater();
+        mi.inflate(R.menu.menu_del_dia, menu);
+
+        return super.onCreateOptionsMenu(menu);
 
     }
 
-    public void patras(View view) {
-        finish();
-    }
-
+    //Chequeo del elemento tocado del menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (android.R.id.home == item.getItemId())
@@ -68,13 +74,8 @@ public class VictoriaActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater mi = getMenuInflater();
-        mi.inflate(R.menu.menu_del_dia, menu);
-
-        return super.onCreateOptionsMenu(menu);
-
+    public void patras(View view) {
+        finish();
     }
 
     /*

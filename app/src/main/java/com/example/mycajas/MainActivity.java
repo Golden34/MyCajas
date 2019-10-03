@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i<l_vistas.size(); i++)
         {
-            double nAle = Math.random()*10+1;
+            double nAle = 10;   //Math.random()*10+1;
             int iALe = (int)nAle;
             total += iALe;
             String sAle = "" + iALe;
